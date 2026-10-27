@@ -12,7 +12,7 @@ its own workspaces 1–0, reached with the same digit keys:
 
 Each screen's bar shows only that screen's workspaces, numbered from 1:
 
-![Both bars: the external monitor shows its workspaces 1-6, the laptop shows its own 1-5](docs/bars.png)
+![Both bars: each shows its own workspaces 1-5 and marks the one visible on its screen, at full strength on the focused laptop and dimmed on the external](docs/bars.png)
 
 ## Why
 
