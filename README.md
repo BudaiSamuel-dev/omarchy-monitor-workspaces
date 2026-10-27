@@ -39,6 +39,9 @@ same screen: `SUPER+3` is always the external's third workspace and
   back to it.
 - **Bar widget:** replaces Omarchy's built-in workspaces widget. It keeps the
   same behaviour: 1–5 are always shown, and 6–0 appear once they exist.
+- **Active marker:** each bar marks the workspace visible on its own screen.
+  The screen with focus shows the marker at full strength; the other screen
+  shows it dimmed.
 
 ## Requirements
 
@@ -115,8 +118,6 @@ The plugin unbinds whatever Omarchy had on those keys. For `CTRL` that is
   because it has no name for Mod5. The keys work normally.
 - It is built for two monitors. A third monitor gets no number keys of its
   own.
-- As with the built-in widget, the highlight marks only the workspace that has
-  focus, not the active workspace on the other screen.
 
 ## Uninstall
 

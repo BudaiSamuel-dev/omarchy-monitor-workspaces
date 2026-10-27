@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "budaisamuel.workspaces",
   "name": "Monitor Workspaces",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "budaisamuel",
   "license": "MIT",
   "description": "Gives every monitor its own set of workspaces: SUPER+N for the primary monitor, SUPER+RightAlt+N for the secondary. Each screen's bar shows only its own workspaces.",

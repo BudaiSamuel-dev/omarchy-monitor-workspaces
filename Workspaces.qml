@@ -100,6 +100,8 @@ BarWidget {
         readonly property var workspace: root.workspaceById(modelData)
         readonly property bool occupied: workspace !== null && workspace.toplevels.values.length > 0
         readonly property bool focused: Hyprland.focusedWorkspace !== null && Hyprland.focusedWorkspace.id === modelData
+        // Visible on its monitor; marked dimmed when that monitor doesn't have focus.
+        readonly property bool shown: workspace !== null && workspace.active
         // First secondary-block workspace shown on a sole (undocked) screen gets a gap.
         readonly property bool firstStray: root.base === 0 && modelData > root.offset && (index === 0 || root.workspaceIds()[index - 1] <= root.offset)
 
@@ -107,8 +109,8 @@ BarWidget {
         Layout.topMargin: firstStray && root.vertical ? Style.space(4) : 0
 
         bar: root.bar
-        text: focused ? "󱓻" : root.label(modelData)
-        opacity: occupied || focused ? 1 : 0.5
+        text: focused || shown ? "󱓻" : root.label(modelData)
+        opacity: focused ? 1 : shown ? 0.65 : occupied ? 1 : 0.5
         horizontalMargin: 6
         verticalPadding: 6
         fixedWidth: root.vertical ? root.barSize : Style.space(20)
